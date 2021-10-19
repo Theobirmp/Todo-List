@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+label {
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: #326273;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popup {
+    float: left;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0, 0%, 100%, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.popup-inner {
+    display: flex;
+    width: 80vw;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #326273;
+    opacity: 1;
+    z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.inputTextForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formElement {
+    width: 150px;
+}
+
+.todoItem {
+    justify-content: center;
+    display: flex;
+}
+
+.todoItemButtonCheck,
+.todoItemButtonErase {
+    width: 5rem;
+    top: 50px;
+}
+
+.todoItemInfo {
+    position: relative;
+    border: 2px solid #A2E3C4;
+    font-size: 2rem;
+    color: white;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 2rem;
+    min-height: 2rem;
+    overflow: hidden;
+    line-height: auto;
+    text-align: center;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: #4DAA57;
+}
+
+.big {
+    font-size: 200px;
+}
+
+
+/* THE CARDS */
+
+.container {
+    position: absolute;
+    display: flex;
+    bottom: 10vh;
+    height: 30%;
+    width: 100vw;
+    justify-content: space-around;
+    border: 5px solid black;
+}
+
+.dateHolder {
+    font-size: 0.6em;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.clearAll {
+    position: relative;
+    align-self: center;
 }
